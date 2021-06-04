@@ -127,8 +127,11 @@ table, th, td {
 	margin-left: auto;
 	margin-right: auto;
 	border-spacing: 10px;
+	padding: 10px;
 }
-
+td {
+	vertical-align: bottom;
+}
 h:nth-child(2) {
 	color: indigo;
 }
@@ -136,6 +139,4 @@ h:nth-child(2) {
 p:first-child {
 	color: indigo;
 }
-iframe {
-	width="420" height="345"
-}
+@media screen and (max-width: 500px) {
