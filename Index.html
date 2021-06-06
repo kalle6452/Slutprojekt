@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="test.css">
     <meta name="viewport" content="width-device-width, initial scale=1">
   </head>
-  <body>
     <body class="container">
-      <nav class="itema">
+<!--Validatorn ger en varning om aria landmarken, vet inte riktigt hur jag kan få med Aria landmarks utan att ta få en varning.-->
+      <nav role="navigation" class="itema">
         <ul id="ul">
           <li><a href="Index.html">Index</a></li>
           <li><a href="Etik.html">Etik</a></li>
@@ -25,19 +25,18 @@
         <header>
           <h1>Välkommen till det ideella ai-förbundet!</h1>
         </header>
-        <main>
           <p>  Målet med den här sidan är att om du som besöker sidan inte har någon aning om vad ai är för något ska kunna ha grundläggande bild efter du har läst igenom hemsidan. </p>
           <p>Efter att du har använt sidan får du gärna svara på formuläret nedan så att jag får en bild om vilka som besöker sidan.</p>
 <!--Skapar ett formulär med metoden get.-->
-          <form action="test.html" id="Index" method="get">
+          <form role="form" action="test.html" id="Index" method="get">
             <p>Fyll i nedan hur gammal du är</p>
 <!--En sektion av formuläret.-->
             <fieldset>
               <legend>Ålder</legend>
 <!--Radio buttons kan man bara fylla i ett begränsat antal alternativ.-->
-              <input type="radio"  name="ålder" value="0-45">
+              <input name="ålder" value="0-45">
               <label>0-45år</label><br>
-              <input type="radio" name="ålder" value="45-99">
+              <input  type="radio" name="ålder" value="45-99">
               <label>45-99år</label><br>
             </fieldset>
             <fieldset>
@@ -52,6 +51,7 @@
               <label>Övrig robot</label><br>
             </fieldset>
             <fieldset>
+<legend>tillverkare</legend>
               <label for="robot">Välj en robottillverkare som gjorde din robot:</label><br>
 <!--Skapar en rullgardinsmeny.-->
               <select id="robot" name="robotlista" form="Index">
@@ -61,15 +61,18 @@
               </select>
             </fieldset>
             <fieldset>
+              <legend>synpunkter</legend>
               <p>Skriv i rutan nedanför om du har några synpunkter om hemsidan</p>
               <textarea name="feedback" rows="8" cols="80"></textarea>
             </fieldset>
             <br>
             <fieldset>
+              <legend>nöjdhet</legend>
               <label for="kvalitet">Hur nöjd är du med sidan(1-10):</label>
               <input type="number" id="kvalitet" name="kvalitet" min="1" max="10"><br>
             </fieldset>
             <fieldset>
+              <legend>inloggning</legend>
               <p> Var vänlig logga in innan du skickar in formuläret.</p>
               <br>
               <label for="email">Email:</label><br>
@@ -83,7 +86,6 @@
               <input type="submit" value="Submit">
             </fieldset>
           </form>
-        </main>
         <p>Du kan få reda på mer information om ai på</p>
         <nav>  <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">Wikipedia</a>
         </nav>
@@ -92,8 +94,7 @@
         </footer>
       </main>
       <div class="itemd">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F5%2F51%2FArtificial_Intelligence%252C_AI.jpg%2F1200px-Artificial_Intelligence%252C_AI.jpg&f=1&nofb=1" alt="ai">
+        <img role="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F5%2F51%2FArtificial_Intelligence%252C_AI.jpg%2F1200px-Artificial_Intelligence%252C_AI.jpg&f=1&nofb=1" alt="ai">
       </div>
     </body>
-  </body>
 </html>
