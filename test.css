@@ -1,7 +1,4 @@
-
-
 /*Love hate*/
-
 a:link {
 	color: blue;
 	text-decoration: none;
@@ -46,7 +43,7 @@ a:hover {
 	background-color: #778899;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
+/*Spalten till vänster där länkarna finns.*/
 .itemb {
 	grid-column-start: 1;
 	grid-column-end: 2;
@@ -56,7 +53,7 @@ a:hover {
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
-
+/*Huvuddelen av skärmen där det huvudsakliga innehållet kommer att finnas.*/
 .itemc {
 	grid-column-start: 2;
 	grid-column-end: 10;
@@ -66,7 +63,7 @@ a:hover {
 	text-align: center;
 	justify-content: center;
 }
-
+/*Spalten till höger där bilderna finns.*/
 .itemd {
 	grid-column-start: 10;
 	grid-column-end: 11;
@@ -87,6 +84,7 @@ ul {
 	padding: 30px;
 	word-spacing: 3cm;
 }
+/*Skapar en lista för de lokala menyerna.*/
 #ul1 {
   grid-column-start: 1;
   grid-row-start: 3;
@@ -112,13 +110,15 @@ ul {
 }
 
 
-/*Bildernas egenskaper*/
+/*Bildernas egenskaper, border radius är att bilden är rundad.*/
 
 img {
-	width: 150px;
+	width: 100%;
 	border-radius: 20px;
 }
 
+/*Tabellens egenskaper, border är ramen, border-spacing är mellanrummet mellan rutor
+och padding är avståndet till nedre dnavelen av till nedre kanten av rutan.*/
 table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -129,14 +129,39 @@ table, th, td {
 	border-spacing: 10px;
 	padding: 10px;
 }
+/*Var förnågonstans texten är på rutan i tabellen.*/
 td {
 	vertical-align: bottom;
 }
+/*Att den andra rubriken får färgen indigo.*/
 h:nth-child(2) {
 	color: indigo;
+	transition: 5;
 }
-
+/*Att den första paragrafen i varje element för indigo färg.*/
 p:first-child {
 	color: indigo;
+	transform: scale(1.01);
 }
-@media screen and (max-width: 500px) {
+@font-face {
+	font-family: "Open Sans";
+	src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2")
+}
+/*@import url(//fonts.googleapis.com/css?family=Open+Sans);*/
+article {
+	font-family: 'Open Sans', sans-serif;
+}
+/*När skärmens bredd är mindre än 1000 pixlar så ändras färgen till grön-*/
+@media only screen and (max-width: 1000px) {
+body {
+ color: green;
+
+}
+/*@font-face {
+	font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
+article {
+	font-family: "Open Sans";
+}
