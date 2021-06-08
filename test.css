@@ -1,139 +1,146 @@
-/*Love hate*/
+/*Love hate, hur länkarna beteer sig i olika situationer.*/
 
 a:link {
-   color: blue;
-   text-decoration: none;
+	color: blue;
+	text-decoration: none;
 }
 
 a:active {
-   color: hsla(49, 100%, 50%, 1);
-   text-decoration: none;
+	color: hsla(49, 100%, 50%, 1);
+	text-decoration: none;
 }
 
 a:visited {
-   color: red;
-   text-decoration: none;
+	color: red;
+	text-decoration: none;
 }
 
 a:hover {
-   color: rgba(92, 172, 22, 1);
-   text-decoration: none;
+	color: rgba(92, 172, 22, 1);
+	text-decoration: none;
 }
 
 
-/*grid, kolumner, rader, text decoration och align.*/
+/*Container är en del av sidan där jag använder mig av css grid.
+grid, kolumner, rader, text decoration och align, bakgruden på sidan är även en gradient.*/
 
 .container {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   height: 1300px;
-   background-size: cover;
-   text-decoration: none;
-   text-align: center;
-   background: linear-gradient(red, orange);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	height: 1300px;
+	background-size: cover;
+	text-decoration: none;
+	text-align: center;
+	background: url(no-dimensions-or-ratio.svg);
+	/*background: linear-gradient(red, orange);*/
 }
 
 
-/*Detaljer om spalten där den globala menyn kommer att finnas*/
+/*Detaljer om spalten där den globala menyn kommer att finnas,
+grid-column är var horisontella sektioner av sidan, row är vertikala.
+grid-template. */
 
 .itema {
-   grid-column-start: 1;
-   grid-column-end: 11;
-   grid-row-start: 1;
-   grid-row-end: 2;
-   background-color: #778899;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-start: 1;
+	grid-column-end: 11;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-color: #778899;
 }
 
 
 /*Spalten till vänster där länkarna finns.*/
 
 .itemb {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 2;
-   grid-row-end: 20;
-   background-color: #778899;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 20;
+	background-color: #778899;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 
 /*Huvuddelen av skärmen där det huvudsakliga innehållet kommer att finnas.*/
 
 .itemc {
-   grid-column-start: 2;
-   grid-column-end: 10;
-   grid-row-start: 2;
-   grid-row-end: 9;
-   background-color: white;
-   text-align: center;
-   justify-content: center;
+	grid-column-start: 2;
+	grid-column-end: 10;
+	grid-row-start: 2;
+	grid-row-end: 9;
+	background-color: white;
+	text-align: center;
+	justify-content: center;
 }
 
 
-/*Spalten till höger där bilderna finns.*/
+/*Spalten till höger där bilderna finns, även en svg fil som bakgrund.*/
 
 .itemd {
-   grid-column-start: 10;
-   grid-column-end: 11;
-   grid-row-start: 2;
-   grid-row-end: 20;
-   background-color: #778899;
+	grid-column-start: 10;
+	grid-column-end: 11;
+	grid-row-start: 2;
+	grid-row-end: 20;
+	background-color: #778899;
+	width: 100%;
+	height: 100%;
 }
 
 
 /*Mer detaljerad info om den globala menyn*/
 
 ul {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   list-style-type: none;
-   text-decoration: none;
-   font-size: 3ex;
-   padding: 30px;
-   word-spacing: 3cm;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	list-style-type: none;
+	text-decoration: none;
+	font-size: 3ex;
+	padding: 30px;
+	word-spacing: 3cm;
 }
 
 
 /*Skapar en lista för de lokala menyerna.*/
 
 #ul1 {
-   grid-column-start: 1;
-   grid-row-start: 3;
+	grid-column-start: 1;
+	grid-row-start: 3;
 }
 
 #Antiken {
-   grid-column-start: 1;
-   grid-row-start: 3;
+	grid-column-start: 1;
+	grid-row-start: 3;
 }
 
 #Nutid {
-   grid-column-start: 1;
-   grid-row-start: 5;
+	grid-column-start: 1;
+	grid-row-start: 5;
 }
 
 #Pa_jobbet {
-   grid-column-start: 1;
-   grid-row-start: 7;
+	grid-column-start: 1;
+	grid-row-start: 7;
 }
 
 #I_hemmet {
-   grid-column-start: 1;
-   grid-row-start: 9;
+	grid-column-start: 1;
+	grid-row-start: 9;
 }
 
+
+/*Att varje del av formuläret som har type=text ökar sin bredd till 250pixlar.*/
+
 input[type=text]:focus {
-   width: 250px;
+	width: 250px;
 }
 
 
 /*Bildernas egenskaper, border radius är att bilden är rundad.*/
 
 img {
-   width: 100%;
-   border-radius: 20px;
+	width: 100%;
+	border-radius: 20px;
 }
 
 
@@ -143,60 +150,63 @@ och padding är avståndet till nedre dnavelen av till nedre kanten av rutan.*/
 table,
 th,
 td {
-   border: 1px solid black;
-   border-collapse: collapse;
-   font-size: 2em;
-   align-content: center;
-   margin-left: auto;
-   margin-right: auto;
-   border-spacing: 10px;
-   padding: 10px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-size: 2em;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 10px;
+	padding: 10px;
 }
 
 
 /*Var förnågonstans texten är på rutan i tabellen.*/
 
 td {
-   vertical-align: bottom;
+	vertical-align: bottom;
 }
 
 
 /*Att den andra rubriken får färgen indigo.*/
 
 h:nth-child(2) {
-   color: indigo;
+	color: indigo;
 }
 
 
 /*Att den första paragrafen i varje element för indigo färg.*/
 
 p:first-child {
-   color: indigo;
-   transform: scale(1.01);
+	color: indigo;
+	transform: scale(1.01);
 }
+
+
+/*Laddar ner fonten open-sans.*/
 
 @font-face {
-   font-family: "Open Sans";
-   src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+	font-family: "Open Sans";
+	src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 }
 
 
-/*@import url(//fonts.googleapis.com/css?family=Open+Sans);*/
+/*Open-sans används för article.*/
 
 article {
-   font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 a {
-   transition: all 1s ease-out;
+	transition: all 1s ease-out;
 }
 
 
 /*När skärmens bredd är mindre än 1000 pixlar så ändras färgen till grön-*/
 
 @media only screen and (max-width: 1000px) {
-   body {
-      color: green;
-      background-color: orange;
-   }
+	body {
+		color: green;
+		background-color: orange;
+	}
 }

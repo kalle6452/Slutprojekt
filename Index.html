@@ -1,100 +1,102 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="utf-8">
-    <title>Index</title>
-    <link rel="stylesheet" href="test.css">
-    <meta name="viewport" content="width-device-width, initial scale=1">
-  </head>
-    <body class="container">
-<!--Validatorn ger en varning om aria landmarken, vet inte riktigt hur jag kan få med Aria landmarks utan att ta få en varning.-->
+   <head>
+      <meta charset="utf-8">
+      <title>Index</title>
+      <link rel="stylesheet" href="test.css">
+      <meta name="viewport" content="width-device-width, initial scale=1">
+   </head>
+   <body class="container">
+      <!--Validatorn ger varning om aria landmarken och säger att de är onödiga, vet inte riktigt hur jag kan få med Aria landmarks utan att ta få en varning.-->
       <nav role="navigation" class="itema">
-        <ul id="ul">
-          <li><a href="Index.html">Index</a></li>
-          <li><a href="Etik.html">Etik</a></li>
-          <li><a href="Historia.html">Historia</a></li>
-          <li><a href="Hot.html">Hot</a></li>
-          <li><a href="Om_oss.html">Om oss</a></li>
-          <li><a href="Användning.html">Användning</a></li>
-        </ul>
-
-    </nav>
+         <ul id="ul">
+            <li><a href="Index.html">Index</a></li>
+            <li><a href="Etik.html">Etik</a></li>
+            <li><a href="Historia.html">Historia</a></li>
+            <li><a href="Hot.html">Hot</a></li>
+            <li><a href="Om_oss.html">Om oss</a></li>
+            <li><a href="Användning.html">Användning</a></li>
+         </ul>
+      </nav>
       <nav class="itemb">
       </nav>
       <main class="itemc">
-        <header>
-          <h1>Välkommen till det ideella ai-förbundet!</h1>
-        </header>
-          <p>  Målet med den här sidan är att om du som besöker sidan inte har någon aning om vad ai är för något ska kunna ha grundläggande bild efter du har läst igenom hemsidan. </p>
-          <p>Efter att du har använt sidan får du gärna svara på formuläret nedan så att jag får en bild om vilka som besöker sidan.</p>
-<!--Skapar ett formulär med metoden get.-->
-          <form role="form" action="test.html" id="Index" method="get">
+         <header>
+            <h1>Välkommen till det ideella ai-förbundet!</h1>
+         </header>
+         <p>  Målet med den här sidan är att om du som besöker sidan inte har någon aning om vad ai är för något ska kunna ha grundläggande bild efter du har läst igenom hemsidan. </p>
+         <p>Efter att du har använt sidan får du gärna svara på formuläret nedan så att jag får en bild om vilka som besöker sidan.</p>
+         <!--Skapar ett formulär med metoden get.-->
+         <form role="form" action="test.html" id="Index" method="get">
             <p>Fyll i nedan hur gammal du är</p>
-<!--En sektion av formuläret.-->
+            <!--En sektion av formuläret.-->
             <fieldset>
-              <legend>Ålder</legend>
-<!--Radio buttons kan man bara fylla i ett begränsat antal alternativ.-->
-              <input name="ålder" value="0-45">
-              <label>0-45år</label><br>
-              <input  type="radio" name="ålder" value="45-99">
-              <label>45-99år</label><br>
+               <legend>Ålder</legend>
+               <!--Radio buttons kan man bara fylla i ett begränsat antal alternativ.-->
+               <input type="radio" name="ålder" value="0-45">
+               <label>0-45år</label><br>
+               <input  type="radio" name="ålder" value="45-99">
+               <label>45-99år</label><br>
             </fieldset>
             <fieldset>
-              <legend>robot</legend>
-              <p>Fyll i nedanför om du redan äger någon robot</p>
-<!--Checkbox tillåter en att fylla i mer än en ruta.-->
-              <input type="checkbox"  name="robot1" value="Robotgräsklippare" checked>
-              <label>Robotgräsklippare</label><br>
-              <input type="checkbox"  name="robot1" value="Robotdammsugare">
-              <label>Robotdammsugare</label><br>
-              <input type="checkbox"  name="robot1" value="Övrig robot">
-              <label>Övrig robot</label><br>
+               <legend>robot</legend>
+               <p>Fyll i nedanför om du redan äger någon robot</p>
+               <!--Checkbox tillåter en att fylla i mer än en ruta.-->
+               <input type="checkbox"  name="robot1" value="Robotgräsklippare" checked>
+               <label>Robotgräsklippare</label><br>
+               <input type="checkbox"  name="robot1" value="Robotdammsugare">
+               <label>Robotdammsugare</label><br>
+               <input type="checkbox"  name="robot1" value="Övrig robot">
+               <label>Övrig robot</label><br>
             </fieldset>
             <fieldset>
-<legend>tillverkare</legend>
-              <label for="robot">Välj en robottillverkare som gjorde din robot:</label><br>
-<!--Skapar en rullgardinsmeny.-->
-              <select id="robot" name="robotlista" form="Index">
-                <option value="Honda">Honda</option>
-                <option value="Husqvarna">Husqvarna</option>
-                <option value="Yamaha">Yamaha</option>
-              </select>
+               <legend>tillverkare</legend>
+               <label for="robot">Välj en robottillverkare som gjorde din robot:</label><br>
+               <!--Skapar en rullgardinsmeny.-->
+               <select id="robot" name="robotlista" form="Index">
+                  <option value="Honda">Honda</option>
+                  <option value="Husqvarna">Husqvarna</option>
+                  <option value="Yamaha">Yamaha</option>
+               </select>
             </fieldset>
             <fieldset>
-              <legend>synpunkter</legend>
-              <p>Skriv i rutan nedanför om du har några synpunkter om hemsidan</p>
-              <textarea name="feedback" rows="8" cols="80"></textarea>
+               <legend>synpunkter</legend>
+               <p>Skriv i rutan nedanför om du har några synpunkter om hemsidan</p>
+               <textarea name="feedback" rows="8" cols="80"></textarea>
             </fieldset>
             <br>
             <fieldset>
-              <legend>nöjdhet</legend>
-              <label for="kvalitet">Hur nöjd är du med sidan(1-10):</label>
-              <input type="number" id="kvalitet" name="kvalitet" min="1" max="10"><br>
+               <legend>nöjdhet</legend>
+               <label for="kvalitet">Hur nöjd är du med roboten(1-10):</label>
+               <input type="range" id="kvalitet" name="kvalitet" min="1" max="10"><br>
+               <label for="kvalitet2">Hur nöjd är du med sidan(1-10):</label>
+               <input type="number" id="kvalitet2" name="kvalitet2" min="1" max="10"><br>
             </fieldset>
             <fieldset>
-              <legend>inloggning</legend>
-              <p> Var vänlig logga in innan du skickar in formuläret.</p>
-              <br>
-              <label for="email">Email:</label><br>
-              <input type="email" id="email" name="email"><br>
-              <label for="användarnamn">Användarnamn:</label><br>
-              <input type="text" id="användarnamn" name="användarnamn" required><br>
-              <label for="lösenord">Lösenord:</label><br>
-              <input type="password" id="lösenord" name="lösenord" required><br><br>
+               <legend>inloggning</legend>
+               <p> Var vänlig logga in innan du skickar in formuläret.</p>
+               <br>
+               <label for="email">Email:</label><br>
+               <input type="email" id="email" name="email"><br>
+               <label for="användarnamn">Användarnamn:</label><br>
+               <input type="text" id="användarnamn" name="användarnamn" required><br>
+               <label for="lösenord">Lösenord:</label><br>
+               <input type="password" id="lösenord" name="lösenord" required><br><br>
             </fieldset>
             <fieldset>
-              <input type="submit" value="Submit">
+               <legend>submit</legend>
+               <input type="submit" value="Submit">
             </fieldset>
-          </form>
-        <p>Du kan få reda på mer information om ai på</p>
-        <nav>  <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">Wikipedia</a>
-        </nav>
-        <footer>
-          <p>All rights reserved Kalle Fogde Stille</p>
-        </footer>
+         </form>
+         <p>Du kan få reda på mer information om ai på</p>
+         <nav>  <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">Wikipedia</a>
+         </nav>
+         <footer>
+            <p>All rights reserved Kalle Fogde Stille</p>
+         </footer>
       </main>
       <div class="itemd">
-        <img role="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F5%2F51%2FArtificial_Intelligence%252C_AI.jpg%2F1200px-Artificial_Intelligence%252C_AI.jpg&f=1&nofb=1" alt="ai">
+         <img role="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F5%2F51%2FArtificial_Intelligence%252C_AI.jpg%2F1200px-Artificial_Intelligence%252C_AI.jpg&f=1&nofb=1" alt="ai">
       </div>
-    </body>
+   </body>
 </html>
